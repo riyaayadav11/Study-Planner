@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Daily Study Schedule Maker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Simple Daily Study Schedule Maker</h1>
+    <p class="subtitle">Add your subjects, pick a start time, and get a ready-to-follow plan for today.</p>
+
+    <section class="card">
+      <h2>1. Settings</h2>
+      <div class="row">
+        <label>Start time
+          <input type="time" id="startTime" value="18:00" />
+        </label>
+        <label>Break between subjects (min)
+          <input type="number" id="breakMin" value="10" min="0" max="60" />
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Add subjects</h2>
+      <form id="subjectForm" class="row">
+        <label>Subject / topic
+          <input type="text" id="subjectName" placeholder="e.g. Data Structures" required />
+        </label>
+        <label>Duration (min)
+          <input type="number" id="subjectMin" value="45" min="5" max="240" required />
+        </label>
+        <label>Priority
+          <select id="subjectPriority">
+            <option value="1">High</option>
+            <option value="2" selected>Medium</option>
+            <option value="3">Low</option>
+          </select>
+        </label>
+        <button type="submit">Add</button>
+      </form>
+      <ul id="subjectList" class="subject-list"></ul>
+    </section>
+
+    <section class="card">
+      <div class="row space-between">
+        <h2>3. Your schedule</h2>
+        <div>
+          <button id="generateBtn">Generate</button>
+          <button id="copyBtn" class="secondary">Copy</button>
+          <button id="printBtn" class="secondary">Print</button>
+          <button id="clearBtn" class="danger">Clear all</button>
+        </div>
+      </div>
+      <p id="summary" class="summary"></p>
+      <table id="scheduleTable">
+        <thead>
+          <tr><th>Time</th><th>Activity</th><th>Done</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
