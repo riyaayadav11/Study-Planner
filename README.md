@@ -4,12 +4,12 @@ A small, no-dependency web app that turns your subjects into a time-blocked stud
 
 ## Features
 
-- Add subjects with a duration and a priority (High / Medium / Low)
-- Choose your start time and break length
-- Auto-generates a schedule, with high-priority subjects first
-- Tick off each study block as you finish it
-- Copy the schedule as text or print it
-- Everything is saved in your browser (localStorage), so it's still there when you come back
+Add subjects with custom study durations and priority levels (High, Medium, or Low).
+Set your study start time and break length.
+Automatically generates a smart timetable with high-priority subjects scheduled first.
+Mark study sessions as complete with simple checkboxes.
+Copy your schedule as text or print it instantly.
+Your schedule is automatically saved in your browser, so you can continue where you left off.
 
 ## How to run
 
